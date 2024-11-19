@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: peridot
+  profiles:
+    active: ${ENV:dev}
+  datasource:
+    database: ${DB_DATABASE:budget_tracker}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/budget_tracker}
+    username: root
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
